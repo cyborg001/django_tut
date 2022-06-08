@@ -1,0 +1,8 @@
+<h1>
+    Resultados para " {{ question }} "
+</h1>
+<ol>
+    {% for n in question.choice_set.all %}
+    <li>{{ n.choice_text }}; Votes: {{ n.votes }}</li>
+    {% endfor %}
+</ol>
